@@ -12,7 +12,7 @@ export class GameInfoComponent implements OnInit, OnChanges {
       description:
         'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.',
     },
-    { title: 'You', description: 'You decide who drinks' },
+    { title: 'You', description: 'You decide who drinks!' },
     { title: 'Me', description: 'Congrats! Drink a shot!' },
     {
       title: 'Category',
@@ -34,9 +34,9 @@ export class GameInfoComponent implements OnInit, OnChanges {
       description:
         'Pick a mate. Your mate must always drink when you drink and the other way around.',
     },
-    { title: 'Thumbmaster', description: '' },
+    { title: 'Me', description: 'Congrats! Drink a shot!' },
     { title: 'Men', description: 'All men drink.' },
-    { title: 'Quizmaster', description: '' },
+    { title: 'You', description: 'You decide who drinks!' },
     {
       title: 'Never have i ever...',
       description:
