@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./game.component.scss'],
 })
 export class GameComponent implements OnInit {
-
   game!: Game;
   gameId!: string;
 
@@ -52,11 +51,10 @@ export class GameComponent implements OnInit {
       this.game.pickCardAnimation = true;
       console.log('New card:' + this.game.currentCard);
       console.log('Game is', this.game);
-      this.saveGame();
-
       this.game.currentPlayer++;
       this.game.currentPlayer =
         this.game.currentPlayer % this.game.players.length;
+      this.saveGame();
       setTimeout(() => {
         this.game.playedCards.push(this.game.currentCard);
         this.game.pickCardAnimation = false;
