@@ -9,6 +9,7 @@ export class PlayerMobileComponent implements OnInit {
 
   @Input() name: any;
   @Input() playerActive: boolean = false;
+  @Input() image = '1.webp';
 
   constructor() { }
 
