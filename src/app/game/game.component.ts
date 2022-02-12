@@ -14,6 +14,7 @@ import { EditPlayerComponent } from '../edit-player/edit-player.component';
 export class GameComponent implements OnInit {
   game!: Game;
   gameId!: string;
+  gameOver = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,7 +36,7 @@ export class GameComponent implements OnInit {
           this.game.currentPlayer = game.currentPlayer;
           this.game.playedCards = game.playedCards;
           this.game.players = game.players;
-          this.game.player_images = game.player_images
+          this.game.player_images = game.player_images;
           this.game.stack = game.stack;
           this.game.pickCardAnimation = game.pickCardAnimation;
           this.game.currentCard = game.currentCard;
@@ -48,7 +49,9 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
-    if (!this.game.pickCardAnimation) {
+    if (this.game.stack.length == 0) {
+      this.gameOver = true;
+    } else if (!this.game.pickCardAnimation) {
       this.game.currentCard = this.game.stack.pop()!;
       this.game.pickCardAnimation = true;
       console.log('New card:' + this.game.currentCard);

@@ -89,10 +89,28 @@
   }
 }
 
-app-player, app-player-mobile {
+app-player,
+app-player-mobile {
   cursor: pointer;
 
   &:hover {
     filter: brightness(1.15);
   }
+}
+
+.gameOver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 300px;
+  }
+}
+
+.preloadImage {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  z-index: -999;
 }
